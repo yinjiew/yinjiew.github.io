@@ -1,0 +1,64 @@
+# filepath: .github/workflows/deploy.yml
+name: Deploy jemdoc site to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x' # 指定 Python 版本
+      - name: Generate HTML files
+        run: |
+          # 确保 jemdoc.py 有执行权限 (如果需要)
+          # chmod +x jemdoc.py
+          # 运行 jemdoc.py 为所有 .jemdoc 文件生成 HTML
+          # 如果你的 jemdoc 文件不在根目录，需要调整路径
+          find . -maxdepth 1 -name '*.jemdoc' -exec python jemdoc.py {} \;
+          # 或者明确指定文件: python jemdoc.py index.jemdoc publications.jemdoc ...
+          # 创建一个空文件，防止部署空目录出错 (如果没有任何 jemdoc 文件)
+          # touch _site/index.html # 如果你确定总会有输出，可以省略这行
+          # 将生成的 HTML 和其他静态文件（CSS, 图片等）移动到部署目录
+          mkdir _site
+          mv *.html _site/
+          # 复制其他必要的文件/目录到 _site
+          cp jemdoc.css _site/
+          # 如果有图片或其他资源目录，也复制过去
+          # cp -r images _site/ # Commented out as 'images' directory does not exist
+          cp bio.png _site/
+          cp favicon.png _site/
+          cp CV.pdf _site/
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload generated site files
+          path: './_site' # 指定包含生成文件的目录
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

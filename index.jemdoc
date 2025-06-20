@@ -1,0 +1,35 @@
+# jemdoc: menu{MENU}{index.html}, nofooter  
+=Yinjie Wang
+
+~~~
+{}{img_left}{bio.png}{alt text}{200}{200}
+Senior Lecturer at [https://www.lzjtu.edu.cn/ School of Mechanical Engineering] \n
+Lanzhou Jiaotong University \n
+~~~
+
+== About me
+I am now a senior lecturer at School of Mechanical Engineering, Lanzhou Jiaotong University.\n
+I received 
+my M.Sc. degree in mechatronics engineering from Lanzhou Jiaotong University in 2013 and 
+my B.Sc. degree in electronic information engineering from Lanzhou Jiaotong University in 2010.\n
+Here is my [CV.pdf CV].\n
+For those who are interested, my Chinese name is 王(Wang)寅杰(Yinjie).
+== Research
+My current research interests include:
+- Deep Learning Theory
+- Statistical Learning Theory
+- Machine Learning Theory
+- Computer Vision
+- Robotics
+
+== Publications
+/reverse chronological order/\n
+. DDRSNet-Rail Surface Defects Classification Based on Depthwise-Dilated Convolution \n
+/by/ *Yinjie Wang*, Zihao Yang, Shuoqi Ren, Xiaohui Gouliu, Jialei Gao, Ting Wang, published at /ICICML 2023/, \[[https://ieeexplore.ieee.org/abstract/document/10424928 paper]\].
+. DDRSNet-Rail Surface Defects Classification Based on Depthwise-Dilated Convolution \n
+/by/ *Yinjie Wang*, Ting Wang, Zihao Yang, Shuoqi Ren, Xiaohui Gouliu, Jialei Gao, published at /ICICML 2023/, \[[https://ieeexplore.ieee.org/abstract/document/10424775 paper]\].
+. A Novel Algorithm of Backward Cloud Model without Certainty (in chinese) \n
+/by/ Pu Gao, *Yinjie Wang*, Zonggang Li, published at /Application Research of Computers 30(8): 2262-2265, 2013/, \[[https://webofscience.clarivate.cn/wos/alldb/full-record/CSCD:4909627 paper]\].
+. An annular region based clustering method of color image segmentation based on 2-D cloud model and its application in vision system of biomimetic robot fish \n
+/by/ Zonggang Li, *Yinjie Wang*, Pu Gao, published at /CCC 2011/, \[[https://ieeexplore.ieee.org/abstract/document/6001121 paper]\].
+
