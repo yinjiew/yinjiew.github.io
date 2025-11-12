@@ -13,3 +13,13 @@ This page lists my projects.
 - Key Project of Scientific and Technological Research of the Ministry of Education. Research on Coordination Control Method of Multi-Machine Fish Based on Consistency Theory. 2011. Co-PI.
 - National Natural Science Foundation of China. Analysis and Synthesis of Robust Consensus for Uncertain Networked Systems. 2010. Co-PI.
 
+
+~~~
+<div style="text-align: center; margin-top: 30px; padding: 10px; border-top: 1px solid #ccc; font-size: 0.9em; color: #888;">
+    Total Visitors: <span id="busuanzi_value_site_uv"></span> &nbsp;|&nbsp; 
+    Page Views: <span id="busuanzi_value_page_pv"></span>
+</div>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+~~~
+
