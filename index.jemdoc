@@ -33,29 +33,3 @@ My current research interests including:
 . An annular region based clustering method of color image segmentation based on 2-D cloud model and its application in vision system of biomimetic robot fish \n
 /by/ Zonggang Li, *Yinjie Wang*, Pu Gao, published at /CCC 2011/, \[[https://ieeexplore.ieee.org/abstract/document/6001121 paper]\].
 
-== Visitor Counter
-{{<div id="page-view-counter">Page views: <span id="page-view-count">loading...</span></div>}}
-{{<script type="text/javascript">
-(function () {
-	var countTarget = document.getElementById('page-view-count');
-	if (!countTarget) {
-		return;
-	}
-
-	fetch('https://api.countapi.xyz/hit/yinjiew.github.io/index')
-		.then(function (response) {
-			return response.json();
-		})
-		.then(function (data) {
-			if (data && typeof data.value === 'number') {
-				countTarget.textContent = String(data.value);
-			} else {
-				countTarget.textContent = 'unavailable';
-			}
-		})
-		.catch(function () {
-			countTarget.textContent = 'unavailable';
-		});
-})();
-</script>}}
-
